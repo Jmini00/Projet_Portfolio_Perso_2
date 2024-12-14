@@ -79,6 +79,105 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+  }
+  @-webkit-keyframes zoomOut {
+  0% {
+  opacity: 1;
+  }
+  
+  50% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  100% {
+  opacity: 0;
+  }
+  }
+  @keyframes zoomOut {
+  0% {
+  opacity: 1;
+  }
+  50% {
+  opacity: 0;
+  -webkit-transform: scale3d(.3, .3, .3);
+  transform: scale3d(.3, .3, .3);
+  }
+  100% {
+  opacity: 0;
+  }
+  } 
+
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+    @keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    } 
+
+    @keyframes flip {
+      0%,80% {transform: rotateY(360deg);}
+    }
+
+    /*@keyframes shine {
+      0% {
+        background-position-x: -500%;
+      }
+      100% {
+        background-position-x: 500%;
+      }
+    }*/
+
+    .navbar-brand span {
+      position: relative;
+      display: inline-block;
+      color: #fff;
+      text-transform: uppercase;
+      animation: flip 8s infinite;
+      animation-delay: calc(.4s * var(--i));
+  }
+
+  /*.masthead-heading {
+    text-shadow:0px 8px 10px #919191;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: shine 5s ease-in-out infinite;
+    background-size: 80%;
+  }*/
 *,
 *::before,
 *::after {
@@ -10979,7 +11078,8 @@ html {
   font-size: 1.25rem;
 }
 .masthead .masthead-avatar {
-  width: 25rem;
+  max-width: 25rem;
+  height: auto;
 }
 
 @media (min-width: 992px) {
