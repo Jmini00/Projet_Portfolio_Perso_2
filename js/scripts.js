@@ -11,12 +11,7 @@
     const cv = document.getElementById('cv');
     cv.addEventListener("click", () => {
         download()
-    })
-
-    const cv2 = document.getElementById('cv2');
-    cv2.addEventListener("click", () => {
-        download()
-    })
+    });
 
     function download() {
         Swal.fire({
@@ -24,8 +19,8 @@
             title: "Mon CV ?...",
             html: `Souhaitez-vous y jeter un oeil ?? <br> Faites le bon choix 😃`,
             showCancelButton: true,
-            confirmButtonText: `<a id="cv" class="btn" href="CVmaj.pdf" download="CVmaj.pdf"><i class="fa fa-thumbs-up"></i> Ok </a>`,
-            cancelButtonText: `<a id="cv2" class="btn" href="CVPro.pdf" download="CVPro.pdf"><i class="fa fa-thumbs-down"></i></a>`,
+            confirmButtonText: `<a class="btn" href="CVmaj.pdf" download="CVmaj.pdf"><i class="fa fa-thumbs-up"></i> Ok </a>`,
+            cancelButtonText: `<a class="btn" href="CVPro.pdf" download="CVPro.pdf"><i class="fa fa-thumbs-down"></i></a>`,
         });
     }
 
