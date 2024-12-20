@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Portfolio</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/sketchy/bootstrap.min.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body id="page-top">
@@ -119,7 +120,7 @@
             </div>
             <!-- About Section Button-->
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="CVmaj.pdf" download="CVmaj.pdf">
+                <a id="cv" class="btn btn-xl btn-outline-light">
                     <i class="fas fa-download me-2"></i>
                     Téléchargez mon CV
                 </a>
@@ -518,19 +519,6 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="col-12 offset-md-1 col-md-4 picture-right">
-                    <img src="assets/img/portfolio/code.jpg" alt="écran montrant du code php" width="100%">
-                </div>
-            </div>
-
-            <div class="row gy-4 mt-4 align-items-center">
-                <div class="col-12 col-md-4 picture-left">
-                    <img src="assets/img/portfolio/design.jpg" alt="écran montrant des designs" width="100%">
-                </div>
-                <div class="col-12 order-first offset-md-1 col-md-7 order-md-last skills-right">
-
-                    <!-- Progress bar -->
                     <div class="mb-3 p-3 bg-white">
                         <div class="row align-items-center">
                             <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
@@ -549,6 +537,19 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="col-12 offset-md-1 col-md-4 picture-right">
+                    <img src="assets/img/portfolio/code.jpg" alt="écran montrant du code php" width="100%">
+                </div>
+            </div>
+
+            <div class="row gy-4 mt-4 align-items-center">
+                <div class="col-12 col-md-4 picture-left">
+                    <img src="assets/img/portfolio/design.jpg" alt="écran montrant des designs" width="100%">
+                </div>
+                <div class="col-12 order-first offset-md-1 col-md-7 order-md-last skills-right">
+
+                    <!-- Progress bar -->
                     <div class="mb-3 p-3 bg-white">
                         <div class="row align-items-center">
                             <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
@@ -656,6 +657,43 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="mb-3 p-3 bg-white">
+                        <div class="row align-items-center">
+                            <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-palette fa-2x me-3 text-primary"></i>
+                                    <p class="fw-bold text-primary m-0">Canva</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="progress" data-bs-toggle="tooltip" title="50%">
+                                    <div class="progress-bar-striped progress-bar-animated bg-info w-50" role="progressbar" aria-valuenow="50"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 p-3 bg-white">
+                        <div class="row align-items-center">
+                            <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-pencil fa-2x me-3 text-primary"></i>
+                                    <p class="fw-bold text-primary m-0">Pages</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="progress" data-bs-toggle="tooltip" title="25%">
+                                    <div class="progress-bar-striped progress-bar-animated bg-info w-25" role="progressbar" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
